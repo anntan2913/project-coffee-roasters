@@ -1,0 +1,19 @@
+// normalize default styles
+@import "normalize";
+
+//bootstrap
+@import "bootstrap/bootstrap-grid.css";
+
+// variables
+@import "settings";
+
+// common styles
+@import "global";
+@import "layout";
+@import "typography";
+
+//pages
+@import "pages/contact";
+@import "pages/homepage";
+@import "pages/products";
+

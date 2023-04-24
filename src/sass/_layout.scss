@@ -1,0 +1,21 @@
+/* Layout */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page {
+  padding: 5px 0;
+}
+
+.content {
+  width: 500px;
+  margin: 0 auto; //by wyśrodk. kolumnę treści o stałej szer (zal. od wlk okna przeglądarki)
+}
+/*
+ostyloanie (rozmieszczenia bloków) elementów strony: kilku głównych bloków:
+menu,header, container, navigation, content, footer
+
+*/
