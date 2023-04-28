@@ -1,19 +1,15 @@
-// normalize default styles
-@import "normalize";
 
-//bootstrap
-@import "bootstrap/bootstrap-grid.css";
+@import "./partials/normalize";
 
-// variables
-@import "settings";
+@import "./partials/settings";
 
-// common styles
-@import "global";
-@import "layout";
-@import "typography";
+@import "./partials/global";
+@import "./partials/layout";
+@import "./partials/typography";
+@import "./partials/icons";
 
-//pages
-@import "pages/contact";
-@import "pages/homepage";
-@import "pages/products";
+@import "./partials/pages/contact";
+@import "./partials/pages/homepage";
+@import "./partials/pages/products";
 
+@import "../vendor/bootstrap-grid.css";

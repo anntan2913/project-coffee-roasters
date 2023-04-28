@@ -1,0 +1,55 @@
+* {
+  font-family: $font-text;
+}
+
+h1 {
+  color: $color-main;
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+h2 {
+  color: $color-main;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $color-dark;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: $color-light;
+}
+
+h5 {
+  color: $color-dark;
+}
+
+h6 {
+  color: $color-dark;
+} 
+
+p {
+  color: $color-dark;
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-inline: 8px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i {
+  color: $color-light;
+}
+
+// powtarzające się naglówki, style dla tekstu h1,h2...

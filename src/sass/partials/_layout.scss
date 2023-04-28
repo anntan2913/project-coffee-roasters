@@ -1,0 +1,155 @@
+/* Layout */
+
+/* header, hero */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+} 
+
+.hero {
+  height: 520px;
+  background-image: url('../images/background.png');
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+
+.hero::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: rgb(42, 38, 38);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header .row {
+  height: 76px;
+}
+
+.logo {
+  text-align: left;
+  padding-left: 140px;
+}
+
+/* hero logo fonts */
+
+.logo__title {
+  color: $color-light;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 4px;
+  line-height: 0.6;
+  margin-bottom: 5px;
+}
+
+.logo__subtitle {
+  color: $color-light;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 1px;
+  line-height: 0.2; 
+}
+
+.main-nav {
+  height: 75px;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 30px;
+}
+
+.hero-content {
+  line-height: 1;  
+  margin-top: 100px;
+  margin-bottom: 180px;
+  line-height: 1;
+}
+
+.hero .first-line {
+  text-align: left;
+  padding-left: 175px;
+  margin-bottom: 2px;
+}
+
+.hero .second-line {
+  text-align: right;
+  padding-right: 175px;
+  margin-top: 2px;
+  position: relative;
+}
+
+.hero .second-line::after {
+  position: absolute;
+  content: "";
+  bottom: -24px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  transform: translateX(-50%);
+  background: $color-main;
+}
+
+.hero-discover {
+  line-height: 1;  
+  margin-top: 60px;
+  margin-bottom: 20px;  
+}
+
+.discover {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+
+  .logo {
+    padding-top: 40px;
+    padding-left: 20px;
+    line-height: 1.5;    
+  }
+
+  .logo__title {
+    letter-spacing: 1px;
+    word-spacing: 0;
+    line-height: 1;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .logo__subtitle {
+    font-size: 8px;
+    letter-spacing: 1px;
+    word-spacing: 0;
+    line-height: 1; 
+  }
+
+  .hero-content {
+    margin: 80px 0;
+  }
+
+  .hero .first-line {
+    padding-left: 20px;
+  }
+  .hero .second-line {
+    padding-right: 20px;
+  }
+}
+/*
+
+.content {
+  width: 500px;
+  margin: 0 auto; //by wyśrodk. kolumnę treści o stałej szer (zal. od wlk okna przeglądarki)
+}
+
+ostylowanie (rozmieszczenia bloków) elementów strony: kilku głównych bloków:
+menu,header, container, navigation, content, footer
+
+*/

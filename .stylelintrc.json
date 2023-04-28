@@ -23,6 +23,6 @@
       "scss/no-duplicate-dollar-variables": true
       },
       "ignoreFiles": [
-        "src/sass/bootstrap/**/*.scss"
+        "src/vendor/bootstrap/**/*.scss"
     ]
   }
