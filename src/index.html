@@ -38,7 +38,7 @@
       <h4 class="discover">Discover</h4>
       <i class="icon-arrow"></i>
     </div>
-  </div>
+  </div> 
 
   <div id="pages">
     <section id="home">
@@ -52,13 +52,69 @@
     </section>
   </div>
 
-  <script id="template-home-page" type="text/x-handlebars-template"></script>
-  <script id="template-product-page" type="text/x-handlebars-template"></script>
-  <script id="template-contact-page" type="text/x-handlebars-template"></script>
-  
   <footer>
     <h6>© 2021 EL TIGRE inc.</h6>
   </footer>
+
+  <script id="template-home-page" type="text/x-handlebars-template">
+
+    <script id="template-product-page" type="text/x-handlebars-template">
+      <div class="product-page-header">
+        <h2>Products</h2>
+      </div>
+      <article class="product"><!-- product -->
+        <header class="product__header">
+          <h3 class="product__name no-spacing">0{{ id }}.{{ title }}</h3>
+        </header>
+        <div class="product__description"> <!-- description -->
+          <p>{{{ description }}}</p>
+        </div> <!-- .description -->
+        <div class="product__details"> <!-- details -->
+          <h5 class="product__roasting">Roasting:<span class="rate">{{{ roasting }}}</span></h5>
+          <h5 class="product__intensity">Intensity:<span class="rate">{{{ intensity }}}</span></h5>
+          <div class="popularity">
+            <img src="./images/popularity.png">
+          </div>
+          <div class="product__image">
+            {{#each image}}
+            {{{ this }}}
+            {{/each}}
+          </div>
+        </div>
+      </article> <!-- product -->
+    </script>
+
+    <div class="about-us-wrapper container-fluid">
+      <div class="about-us-header">
+        <h2>About us</h2>
+      </div>
+      <div class="about-us-content">
+        <p>Who are we? Just a bunch of friends with <br>
+        a love for a good coffee and desire to create <br>
+        something new, something original. <br>
+        Our coffees reflect us - young, wild and free. <br>
+        We are on the journey of new tastes...</p>
+        <p class="join-us">Join us!</p>
+      </div>
+    </div>
+  </script>
+
+  <script id="template-contact-page" type="text/x-handlebars-template">
+    <div class="contact-wrapper container">
+      <div class="contact-header">
+        <h2>Contact us</h2>
+      </div>
+      <form class="contact-content">        
+        <label>Name</label>
+        <input type="text">
+        <label>Title</label>
+        <input type="text">
+        <label>Message</label>
+        <textarea type="text" rows="3"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </script>  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>

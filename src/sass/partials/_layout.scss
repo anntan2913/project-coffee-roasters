@@ -66,7 +66,7 @@ header .row {
 }
 
 .hero-content {
-  line-height: 1;  
+  line-height: 1;
   margin-top: 100px;
   margin-bottom: 180px;
   line-height: 1;
@@ -97,7 +97,7 @@ header .row {
 }
 
 .hero-discover {
-  line-height: 1;  
+  line-height: 1;
   margin-top: 60px;
   margin-bottom: 20px;  
 }
@@ -109,7 +109,6 @@ header .row {
 }
 
 @media (max-width: 576px) {
-
   .logo {
     padding-top: 40px;
     padding-left: 20px;
@@ -138,6 +137,7 @@ header .row {
   .hero .first-line {
     padding-left: 20px;
   }
+
   .hero .second-line {
     padding-right: 20px;
   }
