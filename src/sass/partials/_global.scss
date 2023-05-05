@@ -9,8 +9,32 @@ body {
   background-color: $color-light;
   font-size: 16px;
   line-height: 1.7;
-  //font-weight: $font-regular;
   text-align: center;
+}
+
+#pages > * {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-inline: 8px;
+
+  &.active {
+    color: rgb(172, 2, 158);
+  }
+}
+
+a:hover {
+  text-decoration: underline;
 }
   
    

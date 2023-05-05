@@ -1,0 +1,44 @@
+form {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+input, textarea {
+  display: block;
+  width: 40%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  resize: none;
+  margin-left: 30%;
+}
+
+label {
+  font-weight: $font-bold;
+  line-height: 3;
+}
+
+button, input:focus, textarea:focus {
+  border: 2px solid $color-main;
+}
+
+button {
+  background-color: $color-main;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  margin-top: 20px;	
+}
+
+button:hover {
+  background-color: #5d5b5b;
+  text-decoration: none;
+}
+
+button:active {
+  background-color: #7c353a;
+  text-align: center;
+  color: #fff;
+}

@@ -10,7 +10,7 @@
 
 .hero {
   height: 520px;
-  background-image: url('../images/background.png');
+  background-image: url('./images/background.png');
   background-size: cover;
   position: relative;
   z-index: -2;
@@ -61,7 +61,6 @@ header .row {
 .main-nav {
   height: 75px;
   text-align: center;
-  text-decoration: none;
   padding-top: 30px;
 }
 

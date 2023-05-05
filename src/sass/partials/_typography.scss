@@ -35,19 +35,6 @@ p {
   color: $color-dark;
 }
 
-a {
-  text-decoration: none;
-  color: $color-light;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
-  padding-inline: 8px;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 i {
   color: $color-light;
 }
