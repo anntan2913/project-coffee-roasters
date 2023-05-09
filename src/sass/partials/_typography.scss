@@ -7,11 +7,28 @@ h1 {
   font-size: 44px;
   text-transform: uppercase;
   letter-spacing: 8px;
+  position: relative;
 }
 
 h2 {
   color: $color-main;
   text-transform: uppercase;
+  position: relative;
+  font-size: 36px;
+  letter-spacing: 5px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    width: 360px;
+    height: 4px;
+    transform: translateX(-50%);
+    background: $color-main;
+  }
 }
 
 h3 {
@@ -21,10 +38,12 @@ h3 {
 
 h4 {
   color: $color-light;
+  position: relative;
 }
 
 h5 {
   color: $color-dark;
+  position: relative;
 }
 
 h6 {
@@ -33,10 +52,10 @@ h6 {
 
 p {
   color: $color-dark;
+  font-size: 16px;
 }
 
 i {
   color: $color-light;
+  position: relative;
 }
-
-// powtarzające się naglówki, style dla tekstu h1,h2...

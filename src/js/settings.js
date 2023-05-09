@@ -3,14 +3,14 @@ export const select = {
   templateOf: {
     products: '#template-products',
   },
-  
+
   containerOf: {           
     pages: '#pages',        
     products: '.product-page',
     home: '.home-page',
     contact: '.contact-page',
-
   },
+
   nav: {
     links: '.main-nav a',
   },

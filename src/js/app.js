@@ -1,14 +1,14 @@
-import { settings, select, templates, classNames } from './settings.js';
-import Product from './components/Products.js';
+import { settings, select, classNames } from './settings.js';
+import Products from './components/Products.js';
 
 const app = {
   
   initPages: function(){
     const  thisApp = this;
-
+    
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-
+    
     const idFromHash = window.location.hash.replace('#/', '');
     
     let pageMatchingHash = thisApp.pages[0].id;
@@ -24,9 +24,10 @@ const app = {
 
     for(let link of thisApp.navLinks){
       link.addEventListener('click', function(event){
+        console.log('link clicked'); 
         const clickedElement = this;
         event.preventDefault();
-
+        
         /* get page id from href attribute */
         const id = clickedElement.getAttribute('href').replace('#', '');
 
@@ -59,14 +60,7 @@ const app = {
   initProducts: function(){
     const thisApp = this;
 
-    console.log('thisApp.data:', thisApp.data);
-
-    for(let productData in thisApp.data.products) {
-      // new Product(productData, thisApp.data.products[productData]);
-      new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
-    }
-    /*const testProduct = new Product();
-    console.log('testProduct:', testProduct); */
+    new Products(thisApp.data.products);
   }, 
 
   initData: function(){
@@ -89,11 +83,9 @@ const app = {
     console.log('thisApp:', thisApp);
     console.log('classNames:', classNames);
     console.log('settings:', settings);
-    console.log('templates:', templates);
-    
-    
+       
     thisApp.initData();
-    thisApp.initPages();
+    thisApp.initPages();    
   },
 };
 

@@ -18,7 +18,7 @@
     <header class="header">
       <div class="row">
         <div class="logo col-6">
-          <h2 class="logo__title">El Tigre</h2>
+          <h3 class="logo__title">El Tigre</h3>
           <h5 class="logo__subtitle">Venezuela Coffee Beans</h5>
         </div>
         <nav class="navi-container col-6">
@@ -49,7 +49,7 @@
 
         <div class="product-page container"></div>
 
-        <div class="about-us-wrapper container">
+        <div class="about-us-wrapper container container-fluid">
           <div class="about-us-header">
             <h2>About us</h2>
           </div>
@@ -57,9 +57,12 @@
             <p>Who are we? Just a bunch of friends with <br>
             a love for a good coffee and desire to create <br>
             something new, something original. <br>
+            <br>
             Our coffees reflect us - young, wild and free. <br>
             We are on the journey of new tastes...</p>
-            <p class="join-us">Join us!</p>
+            <div class="join">
+              <p>Join us!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -94,31 +97,55 @@
   </footer>
 
   <script id="template-products" type="text/x-handlebars-template">
-    <div class="product-page-header">
-      <h2>Products</h2>
+    <div>
+      <div class="products-page-header">
+        <h2>Products</h2>
+      </div>
+      {{#each products}}
+      <article class="product row"><!-- product -->
+
+        <div class="col-sm-6 col-lg-6">
+          <div class="card-text">
+            <header class="product__header">
+              <h3 class="product__name no-spacing">0{{ id }}.{{ title }}</h3>
+            </header>
+            <div class="product__description"> <!-- description -->
+              <p>{{{ description }}}</p>
+            </div> <!-- description -->
+            <div class="col-sm-6 col-lg-6">
+              <div class="product__details"> <!-- details -->
+                <h5 class="product__roasting">Roasting:<span class="rate">{{{ roasting }}}</span></h5>
+                <h5 class="product__intensity">Intensity:<span class="rate">{{{ intensity }}}</span></h5>
+              </div>
+            </div> <!-- details -->
+            <div class="col-sm-6 col-lg-6">
+              <div class="popularity">
+                <img src="./images/popularity.png">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6">
+          <div class="card-image">
+            <div class="product__image">
+              {{#each image}}
+              {{{ this }}}
+              {{/each}}
+            </div>
+            {{#if isBestPrice }}
+              <img class="product__best-price" src="./images/best-price.png">
+            {{/if}}
+          </div>
+        </div> 
+        
+      </article> <!-- product -->
+      {{/each}}
+      </div>
     </div>
-    <article class="product"><!-- product -->
-      <header class="product__header">
-        <h3 class="product__name no-spacing">0{{ id }}.{{ title }}</h3>
-      </header>
-      <div class="product__description"> <!-- description -->
-        <p>{{{ description }}}</p>
-      </div> <!-- description -->
-      <div class="product__details"> <!-- details -->
-        <h5 class="product__roasting">Roasting:<span class="rate">{{{ roasting }}}</span></h5>
-        <h5 class="product__intensity">Intensity:<span class="rate">{{{ intensity }}}</span></h5>
-        <div class="popularity">
-          <img src="./images/popularity.png">
-        </div>
-        <div class="product__image">
-          {{#each image}}
-          {{{ this }}}
-          {{/each}}
-        </div>
-      </div> <!-- details -->
-    </article> <!-- product -->
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
-</html>
+</html> 
