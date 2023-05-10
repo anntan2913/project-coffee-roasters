@@ -2,7 +2,8 @@
   margin: 30px 80px;
   flex-wrap: wrap;
   position: relative;
-  } 
+} 
+
 .card-text {
   position: relative;
   height: 260px;
@@ -36,29 +37,30 @@
   }
   
   .product__details {
-    position: relative;    
+    position: relative;
     font-weight: $font-bold;
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 0;
-    margin-top: 120px;    
+    margin-top: 120px;
     text-transform: uppercase;
   
-     .rate {
+    .rate {
       color: $color-main;
     }
   }
 } 
+
 .popularity img { 
   position: absolute;
-  height: 100px; 
+  height: 100px;
   width: 100px;
-  left: 60%;    
+  left: 60%;
   top: 45%;    
 }
 
 .product__image {
-  line-height: 0; 
+  line-height: 0;
   box-sizing: border-box;
   box-shadow: 4px 4px 15px #000000;
 }
@@ -71,7 +73,7 @@
 
 .product:nth-of-type(2n), .product:nth-of-type(3n) {
   .popularity {  
-  display: none;
+    display: none;
   } 
 }
 
@@ -98,6 +100,7 @@
       visibility: hidden;
     }
   }
+
   .product__description p {
     position: absolute;
     text-align: justify;
@@ -108,20 +111,22 @@
     top: 30px;
     left: 80px;
   }
+
   .popularity img { 
     position: absolute;
-    height: 50px; 
+    height: 50px;
     width: 50px;
-    left: 2%;    
+    left: 2%;
     top: 30%;    
   }
+
   .product__details {
-    position: relative;    
+    position: relative;
     font-weight: $font-semibold;
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 0;
-    margin-top: 160px;    
+    margin-top: 160px;
     text-transform: uppercase;
     flex-wrap: nowrap;
   }
@@ -147,21 +152,22 @@
       background: $color-main;
     }
   }
+
   .popularity img { 
     position: absolute;
-    height: 50px; 
+    height: 50px;
     width: 50px;
-    left: 5%;    
+    left: 5%;
     top: 30%;    
   }
 
   .product__details {
-    position: relative;    
+    position: relative;
     font-weight: $font-semibold;
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 1.2;
-    margin-top: 140px;    
+    margin-top: 140px;
     text-transform: uppercase;
     flex-wrap: nowrap;
   }
