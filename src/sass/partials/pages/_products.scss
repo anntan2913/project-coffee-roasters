@@ -30,7 +30,7 @@
     position: absolute;
     text-align: justify;
     font-weight: $font-semibold;
-    font-size: 13px;
+    font-size: 14px;
     max-width: 240px;
     top: 30px;
     left: 80px;
@@ -81,94 +81,136 @@
   flex-direction: row-reverse;
 }
 
-@media (min-width: 570px) and (max-width: 760px) {
-  .product__name {
-    font-weight: $font-semibold;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 1.2;
-  
-    &:after {
-      position: absolute;
-      content: "";
-      top: 40px;
-      left: 15px;
-      width: 30px;
-      height: 2px;
-      transform: translateX(-50%);
-      background: $color-main;
-      visibility: hidden;
+@media (min-width: 650px) and (max-width: 890px) {
+  .card-text{
+    .product__name {
+      font-weight: $font-semibold;
+      font-size: 22px;
+      letter-spacing: 0;
+      line-height: 1.2;      
+    }
+
+    .product__description p {
+      font-weight: $font-regular;
+      font-size: 14px;
+      max-width: 240px;
+      top: 30px;
+      left: 80px;
+      line-height: 1.2;
+    }
+
+    .popularity img {       
+      height: 50px;
+      width: 50px;
+      left: 2%;
+      top: 30%;    
+    }
+
+    .product__details {      
+      font-weight: $font-semibold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-top: 170px;      
     }
   }
+}  
 
-  .product__description p {
-    position: absolute;
-    text-align: justify;
-    overflow: auto;
-    font-weight: $font-regular;
-    font-size: 13px;
-    max-width: 240px;
-    top: 30px;
-    left: 80px;
+@media (min-width: 570px) and (max-width: 650px) {
+  .product {  
+    margin: 10px 20px;        
+  } 
+  .card-text{
+    .product__name {
+      width: 160px;
+      font-weight: $font-bold;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 1.2;      
+    }
+
+    .product__description p {
+      font-weight: $font-semibold;
+      font-size: 14px;
+      max-width: 240px;
+      top: 30px;
+      left: 80px;
+      line-height: 1.2;
+    }
+
+    .popularity img {
+      height: 50px;
+      width: 50px;
+      left: 2%;
+      top: 30%;    
+    }
+
+    .product__details {      
+      font-weight: $font-semibold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-top: 170px;      
+    }
   }
-
-  .popularity img { 
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    left: 2%;
-    top: 30%;    
+  .product__image {    
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-top: 40px;
   }
-
-  .product__details {
-    position: relative;
-    font-weight: $font-semibold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 0;
-    margin-top: 160px;
-    text-transform: uppercase;
-    flex-wrap: nowrap;
+  
+  .product__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
 }  
 
 
-@media (max-width: 512px) {
-  .product__name {
-    font-weight: $font-semibold;
-    font-size: 15px;
-    letter-spacing: 0;
-    line-height: 1;
-  
-    &:after {
-      position: absolute;
-      content: "";
-      top: 20px;
-      left: 15px;
-      width: 30px;
-      height: 2px;
-      transform: translateX(-50%);
-      background: $color-main;
+@media (max-width: 570px) {
+  .product {  
+    margin: 10px 40px;        
+  } 
+
+  .card-text {
+    .product__name {
+      font-weight: $font-semibold;
+      font-size: 14px;
+      letter-spacing: 0.2;
+      line-height: 1;
+    
+      &:after {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 3px;
+      }
     }
-  }
 
-  .popularity img { 
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    left: 5%;
-    top: 30%;    
-  }
+    .product__description p {
+      font-weight: $font-semibold;
+      font-size: 14px;
+      max-width: 240px;
+      top: 5px;
+      left: 55px;
+      line-height: 1.2;
+    }
 
-  .product__details {
-    position: relative;
-    font-weight: $font-semibold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    margin-top: 140px;
-    text-transform: uppercase;
-    flex-wrap: nowrap;
+    .popularity img { 
+      height: 60px;
+      width: 60px;
+      left: 0;
+      top: 35%;    
+    }
+
+    .product__details {
+      font-weight: $font-semibold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.4;
+      margin-top: 180px;
+      
+      
+    }
   }
 }

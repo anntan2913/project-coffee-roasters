@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -53,17 +54,60 @@
           <div class="about-us-header">
             <h2>About us</h2>
           </div>
+         
+          <div class="about-us-content">
+            <div class="carousel" data-flickity='{ "autoPlay": 5000, "prevNextButtons": false, "pageDots": false }'>
+              <div class="carousel-cell">
+                <div class="cell-image"><img src="images/3.png"></div>
+                <div class="cell-content">
+                  <h3>Elizabeth <span>Doherty</span></h3>
+                  <p>Experienced barista from Bahamas.<br>
+                     She says that Venezuela has opened her<br>
+                     eyes on coffee. "It's not about the taste",<br>
+                     she says. "It's all about the feelings."
+                  </p>
+                </div>
+              </div> 
+              <div class="carousel-cell">
+                <div class="cell-image"><img src="images/2.png"></div>
+                <div class="cell-content">
+                  <h3>Max <span>Selfish</span></h3>
+                  <p>Max ist the austrian barista with years of<br>
+                     experience from the hotels across the whole<br>
+                     Europe. "Venezuela coffee was a lightening<br>
+                     experience for me! Ihave never drink such<br>
+                     an amazing coffee!", he says.
+                  </p>                  
+                </div>          
+              </div>
+              <div class="carousel-cell">
+                <div class="cell-image"><img src="images/1.png"></div>
+                <div class="cell-content">
+                  <h3>Ping <span>Nihao</span></h3>
+                  <p>Ping is the youngest in the team. He doesn't<br>
+                     like calling coffee a mysterious act.<br>
+                     He says, a good coffee ist like a mathematical<br>
+                     formula. Once you figured it out, every<br>
+                     coffee you make is a masterpiece.
+                  </p>                  
+                </div>          
+              </div>                       
+            </div>
+          </div> 
+
+          <!--
           <div class="about-us-content">
             <p>Who are we? Just a bunch of friends with <br>
             a love for a good coffee and desire to create <br>
             something new, something original. <br>
             <br>
             Our coffees reflect us - young, wild and free. <br>
-            We are on the journey of new tastes...</p>
+            We are on the journey of new tastes...</p> 
             <div class="join">
               <p>Join us!</p>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </section>
@@ -104,7 +148,7 @@
       {{#each products}}
       <article class="product row"><!-- product -->
 
-        <div class="col-sm-6 col-lg-6">
+        <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="card-text">
             <header class="product__header">
               <h3 class="product__name no-spacing">0{{ id }}.{{ title }}</h3>
@@ -112,13 +156,13 @@
             <div class="product__description"> <!-- description -->
               <p>{{{ description }}}</p>
             </div> <!-- description -->
-            <div class="col-sm-6 col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
               <div class="product__details"> <!-- details -->
                 <h5 class="product__roasting">Roasting:<span class="rate">{{{ roasting }}}</span></h5>
                 <h5 class="product__intensity">Intensity:<span class="rate">{{{ intensity }}}</span></h5>
               </div>
             </div> <!-- details -->
-            <div class="col-sm-6 col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
               <div class="popularity">
                 <img src="./images/popularity.png">
               </div>
@@ -126,7 +170,7 @@
           </div>
         </div>
 
-        <div class="col-sm-6 col-lg-6">
+        <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="card-image">
             <div class="product__image">
               {{#each image}}
@@ -146,6 +190,7 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html> 

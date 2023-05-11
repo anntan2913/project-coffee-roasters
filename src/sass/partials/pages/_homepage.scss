@@ -1,6 +1,6 @@
 /* About us */
 .about-us-wrapper {
-  height: 480px;
+  height: 520px;
   width: 100%;
   background: rgba(0, 0, 0, 0.6) url('../images/about-us.jpg');
   background-blend-mode: darken;
@@ -12,6 +12,67 @@
   margin-top: 30px;
 }
 
+/* Carousel */
+
+.carousel {
+  width: 100%;
+  height: 380px;
+  margin: 15px, auto;
+  margin-bottom: 50px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .cell-content {
+    padding: 10px 5px 15px 40%;
+    text-align: left;
+    font-size: 14px;
+    font-family: "Lato";
+    color: $color-dark;
+    margin-top: 50px;
+    margin-left: 50px;
+
+    h3 {
+      font-size: 22px;
+      color: $color-light;
+      font-weight: 600;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      
+      span {
+        font-weight: 800;
+      }
+    }
+
+    p {      
+      line-height: 24px;
+      color: $color-light;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 1px;    
+    }
+  }
+
+  .cell-image {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 18%;
+    left: 15%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;    
+    }
+  }
+}
+
+/*
 .about-us-content p {
   color: $color-light;
   font-weight: $font-semibold;
@@ -27,19 +88,44 @@
   margin-right: 30%;
   text-align-last: right;
 }
-
+*/
 @media (min-width: 570px) and (max-width: 760px) {
+  /*
   .about-us-content p {
     font-size: 15px;
     margin-left: 10%;
     padding-top: 10px;
+  } */
+
+  .carousel-cell .cell-image {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: 20%;
+    left: 8%;
   }
 }  
 
 @media (max-width: 512px) {
+  /*
   .about-us-content p {
     font-size: 14px;
     margin-left: 20px;
     padding-top: 15px;
+  } */
+
+  .carousel-cell .cell-image {
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    top: 25%;
+    left: 3%;
   }
-}
+
+  .carousel-cell .cell-content p {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+  }
+}  
