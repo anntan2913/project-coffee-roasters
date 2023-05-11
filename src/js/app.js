@@ -63,6 +63,16 @@ const app = {
     new Products(thisApp.data.products);
   }, 
 
+  initHeaders: function(){
+    const thisApp = this;
+
+    thisApp.headings = ['Home of <br> Original Tastes', 'Real Venezuela,<br> Real Coffee', 'Taste <br> Real Venezuela']; 
+    console.log(thisApp.headings);
+    const randomIndex = Math.floor(Math.random() * 3);
+    thisApp.headingElement = document.querySelector('.three-headers');
+    thisApp.headingElement.innerHTML = thisApp.headings[randomIndex];
+  },  
+
   initData: function(){
     const thisApp = this;
     
@@ -85,7 +95,8 @@ const app = {
     console.log('settings:', settings);
        
     thisApp.initData();
-    thisApp.initPages();    
+    thisApp.initPages();
+    thisApp.initHeaders();
   },
 };
 

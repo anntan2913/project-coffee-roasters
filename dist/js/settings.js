@@ -35,7 +35,3 @@ export const settings = {
 export const templates = {    
   products: Handlebars.compile(document.querySelector(select.templateOf.products).innerHTML),
 };
-
-
-//selektory, nazwy klas, ustawienia...
-

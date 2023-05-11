@@ -17,7 +17,6 @@
   position: relative;
 }
 
-
 header .row {
   height: 76px;
 }
@@ -56,10 +55,27 @@ header .row {
 .hero-content {
   line-height: 1;
   margin-top: 100px;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
   line-height: 1;
 }
 
+.hero .three-headers {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.hero .three-headers::after {
+  position: absolute;
+  content: "";
+  bottom: -24px;
+  left: 50%;
+  width: 200px;
+  height: 3px;
+  transform: translateX(-50%);
+  background: $color-main;
+}
+
+/*
 .hero .first-line {
   text-align: left;
   padding-left: 175px;
@@ -82,11 +98,11 @@ header .row {
   height: 3px;
   transform: translateX(-50%);
   background: $color-main;
-}
+} */
 
 .hero-discover {
   line-height: 1;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 20px;  
 }
 
@@ -130,14 +146,3 @@ header .row {
     padding-right: 20px;
   }
 }
-/*
-
-.content {
-  width: 500px;
-  margin: 0 auto; //by wyśrodk. kolumnę treści o stałej szer (zal. od wlk okna przeglądarki)
-}
-
-ostylowanie (rozmieszczenia bloków) elementów strony: kilku głównych bloków:
-menu,header, container, navigation, content, footer
-
-*/
